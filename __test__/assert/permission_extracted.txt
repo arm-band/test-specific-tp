@@ -1,0 +1,18 @@
+.:
+0 drwxr-sr-x 2 testuser testuser   23 12月 25 23:42 cgi-bin
+0 drwxrwxr-x 3 apache     apache   70 12月 25 23:42 .
+
+./cgi-bin:
+0 drwxrwSrw- 2 testuser testuser   23 12月 25 23:42 data
+4 -rwxr-xr-x 1 testuser testuser 2342 12月 25 23:42 index.cgi
+0 drwxr-sr-x 2 testuser testuser   23 12月 25 23:42 .
+0 drwxrwxr-x 3 apache     apache   70 12月 25 23:42 ..
+
+./css:
+0 drwxrwxr-x 3 apache     apache   70 12月 25 23:42 ..
+
+./data:
+4 -rw-rw-rw- 1 testuser testuser 4223 12月 25 23:42 data.txt
+0 drwxrwSrw- 2 testuser testuser   23 12月 25 23:42 .
+0 drwxr-sr-x 3 apache     apache   70 12月 25 23:42 ..
+

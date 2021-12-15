@@ -1,4 +1,4 @@
-import { specificTP } from './bin/specific.js';
+const specificTP = require('./bin/specific');
 
 const specificTPInstance = new specificTP();
 specificTPInstance.main();

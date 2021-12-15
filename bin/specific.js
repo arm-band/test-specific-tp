@@ -1,6 +1,7 @@
-import * as fs from 'fs';
+const fs   = require('fs');
+const path = require('path');
 
-export class specificTP {
+module.exports = class specificTP {
     constructor() {
         this.argvs    = process.argv;
         this.filename = '';
@@ -35,8 +36,7 @@ export class specificTP {
     }
     isExistFile(filename, filepath = this.dir.src) {
         try {
-            console.log(`${filepath}${filename}`)
-            fs.statSync(`${filepath}${filename}`);
+            fs.statSync(path.join(filepath, filename));
             return 0;
         } catch(err) {
             if(err.code === 'ENOENT') {
@@ -53,7 +53,7 @@ export class specificTP {
     }
     parseSyntax(filename, filepath = this.dir.src) {
         const buf = fs.readFileSync(
-            `${filepath}${filename}`,
+            path.join(filepath, filename),
             this.encode
         );
         const bufExcludeCR = buf.replace(/\r/g, '');
@@ -69,7 +69,7 @@ export class specificTP {
     writeFile(filename, bufStr, filepath = this.dir.dist) {
         const filenameAray = filename.split(/\.(?=[^.]+$)/);
         fs.writeFileSync(
-            `${filepath}${filenameAray[0]}_extracted.${filenameAray[1]}`,
+            `${path.join(filepath, filenameAray[0])}_extracted.${filenameAray[1]}`,
             bufStr
         );
         return 0;

@@ -4,10 +4,13 @@
     "description": "特殊なパーミッションを設定したファイル・ディレクトリの一覧を抽出してリストアップする",
     "main": "index.js",
     "scripts": {
-        "start": "node ./index --experimental-modules",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node ./index",
+        "test": "jest",
+        "test:coverage": "jest --coverage"
     },
     "author": "",
     "license": "ISC",
-    "type": "module"
+    "devDpendencies": {
+        "jest": "^27.4.5"
+    }
 }

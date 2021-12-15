@@ -3,3 +3,4 @@
 !/src/.gitkeep
 /dist/**/*
 !/dist/.gitkeep
+/coverage/
